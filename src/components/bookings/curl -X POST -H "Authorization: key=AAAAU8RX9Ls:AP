@@ -1,0 +1,9 @@
+curl -X POST -H "Authorization: key=AAAAU8RX9Ls:APA91bG4sDnVsqt1RfDFaXh4RBGN01blSoSvF8oGSq0zJWKZIdSSN21qoOkP8Ii8VRb2qfx9VWPktgBXGuUL9V_B426rH4bOUVjaHf0qx_9nyJnqUYOCcXmt3FsD20GDGfjZqk89-Gje" -H "Content-Type: application/json" -d '{
+  "notification": {
+    "title": "Hey Mohit",
+    "body": "Ankush C. has approved your leave",
+    "icon": "firebase-logo.png",
+    "click_action": "http://localhost:8081"
+  },
+  "to": "eSIPJhCDsTc:APA91bG7JBQko93I_lqJm9VZkyiIUk1YJk_-Uvc1-YadQSrw4Gt44tospri_49GzJjm22dXsrQVN9OjsPvPapNr3sTIZ96jO-oFMnOCAoCtL-7ncG6Ma-h91SsGevR8zKBx1KjL0KuhU"
+}' "https://fcm.googleapis.com/fcm/send"
