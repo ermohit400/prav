@@ -51,12 +51,12 @@ class SettingScreen extends React.Component {
           <Right />
         </Header>
         <Content>
-          <H3 style={styles.headline}> Autoguru </H3>
+          <H3 style={styles.headline}> MyMobileApp </H3>
           <Text style={styles.discription}>
-          <Text>{`Autoguru version ${cosmicConfig.versionCode}\n`}</Text>
+          <Text>{`MyMobileApp version ${cosmicConfig.versionCode}\n`}</Text>
           <Text>Support: 
-            <Text  style={{color: '#64a6fe'}} onPress={() => Linking.openURL('http://autoguru.ie')}>
-             {` https://autoguru.ie`}
+            <Text  style={{color: '#64a6fe'}} onPress={() => Linking.openURL('http://google.com')}>
+            {`MyMobileApp`}
             </Text>
           </Text>
           <Text> {"\n"}{"\n"} </Text>
@@ -71,7 +71,7 @@ class SettingScreen extends React.Component {
           <Text> {"\n"}{"\n"} </Text>
           <Text tyle={{fontStyle: 'bold'}} >
             By using this app you agreeing to our
-             <Text  style={{color: '#64a6fe'}} onPress={() => Linking.openURL('http://autoguru.ie/pages/privacy_policy')}>
+             <Text  style={{color: '#64a6fe'}} onPress={() => Linking.openURL('http://MyMobileApp.com/pages/privacy_policy')}>
              {` Privcay Policy`}
           </Text>
             

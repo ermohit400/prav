@@ -53,10 +53,10 @@ class ContactScreen extends React.Component {
           <H3 style={styles.headline}> Contact Us </H3>
 
           <Text style={styles.discription}>
-          <Text>{`Autoguru Forms version ${cosmicConfig.versionCode}\n`}</Text>
+          <Text>{`MyMobileApp Forms version ${cosmicConfig.versionCode}\n`}</Text>
           <Text>Support: 
-            <Text  style={{color: '#64a6fe'}} onPress={() => Linking.openURL('http://autoguru.ie/contact_us')}>
-             {` http://autoguru.ie/contact_us`}
+            <Text  style={{color: '#64a6fe'}} onPress={() => Linking.openURL('http://MyMobileApp.com/contact_us')}>
+             {` http://MyMobileApp.com`}
             </Text>
           </Text>
           </Text>
