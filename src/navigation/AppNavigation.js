@@ -13,7 +13,7 @@ import Profile from "../containers/profile";
 import MarkFinished from "../containers/mark_finished";
 import BookingScreen from "../containers/booking";
 import Settings from "../containers/settings";
-
+import SignupScreen from "../containers/signup";
 
 // https://github.com/react-community/react-navigation/issues/1254
 const noTransitionConfig = () => ({
@@ -47,6 +47,7 @@ const LoginStack = createStackNavigator({
   authenticateScreen: { screen: Authenticate },
   forgotpasswordScreen: { screen: ForgottenPasswordScreen },
   loginScreen: { screen: Login },
+  signupScreen: { screen: SignupScreen},
 }, {headerMode: 'none'})
 
 // Manifest of possible screens

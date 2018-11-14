@@ -6,13 +6,13 @@ export default {
     justifyContent: 'center',
   },
   itemStyle:{
-    marginTop: 5
+    // marginTop: 5
   },
   labelStyle:{
     color: "#fff"
   },
   icon: {
-    width: 200,
+    width: 100,
   },
   imageCont:{
     margin: 10,
@@ -21,13 +21,19 @@ export default {
     flex: 1,
   },
   loginBox: {
-    marginTop: 102,
+    // marginTop: 10,
     marginLeft: 50,
     marginRight: 50,
-    flex: 2,
+    flex: 1,
+  },
+  midText:{
+    fontSize: 25,
+    fontFamily: 'OpenSans-Light',
+    marginLeft: 40,
+    marginRight: 40,
   },
   button: {
-    backgroundColor: '#5FB2F4',
+    /*backgroundColor: '#5FB2F4',*/
   },
   signupBtn: {
     alignSelf: 'center',

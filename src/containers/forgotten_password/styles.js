@@ -10,14 +10,17 @@ export default {
   },
   icon: {
     margin: 25,
-    width: 200,
+    width: 100,
   },
   imageCont:{
     justifyContent: 'center',
     alignItems: 'center',
   },
   loginBox: {
-    margin: 12,
+    marginTop: 10,
+    marginLeft: 50,
+    marginRight: 50,
+    flex: 2,
   },
   button: {
    

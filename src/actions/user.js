@@ -1,9 +1,9 @@
 import axios from '../utils/api';
- 
 import apiConfig from '../config/api';
 import storage from '../utils/storage';
 
 // Constants
+const SIGNUP = 'SIGNUP';
 const LOGIN = 'LOGIN';
 const LOGOUT = 'LOGOUT';
 const CURRENT_USER = 'CURRENT_USER';
@@ -26,7 +26,6 @@ export const authenticate = payloads => dispatch => {
     })
 }
 
-
 export const changeProfilePicture = payloads => dispatch => {
   return axios.post('/v1/me/picture',  {payloads: { image_attributes: payloads}
   }).then(res => {
@@ -46,8 +45,6 @@ export const initiateForgotpassword = payloads => dispatch => {
     return res
   })
 }
-
-
 
 export const fetchCurrentUser = payloads => dispatch => {
   return axios.get('/v1/me',  {
@@ -81,5 +78,17 @@ export const switchAvailability = availability => dispatch => {
         return res
       }
     })
-  
+}
+
+export const signup = payloads => dispatch => {
+  return axios.post('/v1/signup',  {payloads: { user: payloads}
+  }).then(res => {
+      if(res.status == 200){
+        saveToken(res.data.token);
+        dispatch({ type: SIGNUP, data: res.data })
+        return res
+      } else {
+        return res
+      }
+    })
 }

@@ -10,7 +10,7 @@ export default {
   },
   icon: {
     margin: 25,
-    width: 200,
+    width: 100,
   },
   imageCont:{
     justifyContent: 'center',
@@ -20,10 +20,23 @@ export default {
     marginLeft: 50,
     marginRight: 50,
     marginBottom: 0,
-    marginTop: 252,
+    marginTop: 100,
+  },
+  midText:{
+    fontSize: 25,
+    fontFamily: 'OpenSans-Light',
+    marginLeft: 40,
+    marginRight: 40,
   },
   button: {
-    backgroundColor: '#5FB2F4',
+    /*backgroundColor: '#5FB2F4',*/
+    fontFamily: 'OpenSans-Light',
+    marginTop: 5
+  },
+  buttonFb: {
+    fontFamily: 'OpenSans-Light',
+    marginTop: 5,
+    backgroundColor: '#3B5998',
   },
   signupBtn: {
     alignSelf: 'center',

@@ -32,6 +32,11 @@ class LoginScreen extends React.Component {
   onSubmit(){
     this.login();
   }
+
+  onSignupButtonPressHandler(){
+    this.props.navigation.navigate('signupScreen')
+  }
+
   onForgotpasswordPressHandler(){
     this.props.navigation.navigate('forgotpasswordScreen')
   }
@@ -75,7 +80,6 @@ class LoginScreen extends React.Component {
             source={require('../../../assets/images/splash_bg.jpg')} 
             style={ { width: dimensions.window.width, height: dimensions.window.height }}>
           <KeyboardAwareScrollView>
-          
             <View>  
               <View
                 style={styles.imageCont} >
@@ -84,13 +88,15 @@ class LoginScreen extends React.Component {
                 source={ require('../../../assets/images/logo.png') } 
                 resizeMode="contain"
                 />
+                <Text style={styles.midText}>Login to Get Started!</Text>
               </View>
               <View style={styles.loginBox}>
                   <Text transparent style={styles.formMsg}>{this.state.error}</Text>
                 <Form>
                     <Item style={styles.itemStyle} floatingLabel >
-                      <Label style={styles.labelStyle} >Enter Email</Label>
                       <Input
+                        placeholder="Email"
+                        placeholderTextColor="#FFFFFF"
                         keyboardType={'email-address'}
                         autoCapitalize="none"
                         style={styles.textbox}
@@ -101,9 +107,10 @@ class LoginScreen extends React.Component {
                         autoCorrect={false}
                       />
                     </Item>
-                    <Item style={styles.itemStyle} floatingLabel last>
-                      <Label style={styles.labelStyle} >Enter Password</Label>
+                    <Item style={styles.itemStyle} floatingLabel >
                       <Input
+                        placeholder="Password"
+                        placeholderTextColor="#FFFFFF"
                         autoCapitalize="none"
                         style={styles.textbox}
                         maxLength={30}
@@ -130,6 +137,13 @@ class LoginScreen extends React.Component {
                     </View>
 
                 </Form>
+
+                <Button transparent dark full  
+                  onPress={() => this.onSignupButtonPressHandler()}
+                >
+                  <Text style={{color: "#fff"}} > Signup </Text>
+                </Button> 
+
                 <Button transparent dark full  
                   onPress={() => this.onForgotpasswordPressHandler()}
                 >

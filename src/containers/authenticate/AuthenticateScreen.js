@@ -13,6 +13,7 @@ import {
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+
 import * as userActions from "../../actions/user";
 
 import styles from './styles';
@@ -28,13 +29,14 @@ class AuthenticateScreen extends React.Component {
   componentDidMount(){
       this.props.fetchCurrentUser()
       .then(res => {
+        console.log('res: ', res);
         if(res.status == 200){
           this.props.navigation.navigate('homeStack')
         }
       })
       .catch(error => {
        const messages = _.get(error, 'message')
-       console.log( messages);
+       console.log( 'messages: ', messages);
        this.setState({
         isLoaded: true,
        })
@@ -43,6 +45,10 @@ class AuthenticateScreen extends React.Component {
 
   onLoginButtonPressHandler(){
     this.props.navigation.navigate('loginScreen')
+  }
+
+  onSignupButtonPressHandler(){
+    this.props.navigation.navigate('signupScreen')
   }
 
   render(){
@@ -60,6 +66,7 @@ class AuthenticateScreen extends React.Component {
                 source={ require('../../../assets/images/logo.png') } 
                 resizeMode="contain"
                 />
+                <Text style={styles.midText}>Get started to start plan your rent / property</Text>
               </View>
               { this.state.isLoaded ? 
                 <View style={styles.loginBox}>
@@ -67,13 +74,24 @@ class AuthenticateScreen extends React.Component {
                       full
                       rounded
                       style={styles.button}
+                      onPress={() => this.onSignupButtonPressHandler()}
+                    >
+                      <Text>Sign Up with Email</Text>
+                    </Button>
+                    <Button
+                      full
+                      rounded
+                      style={styles.buttonFb}
                       onPress={() => this.onLoginButtonPressHandler()}
                     >
-                      <Text>Get Started</Text>
+                      <Text>Facebook Login</Text>
+                    </Button>
+                    <Button transparent dark full onPress={() => this.onLoginButtonPressHandler()}>
+                      <Text>Already have an account? Login</Text>
                     </Button>
                 </View> :
                 <View> 
-                  <Spinner color='white'  />
+                  <Spinner color='white'/>
                 </View>
               }
             </View>
