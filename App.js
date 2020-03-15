@@ -1,7 +1,7 @@
 import React from 'react';
 import { Font, AppLoading } from 'expo';
 import { StyleSheet, Text, View } from 'react-native';
-import PocketRent from "./src";
+import App from "./src";
 
 export default class App extends React.Component {
   constructor(){
@@ -29,7 +29,7 @@ export default class App extends React.Component {
       return <AppLoading />;
     }
     return (
-      <PocketRent />
+      <App/>
     );
   }
 }

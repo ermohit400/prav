@@ -1,8 +1,10 @@
 {
+  "name": "meltonindiangrocery",
+  "displayName": "meltonindiangrocery",
   "expo": {
-    "name": "PR1",
+    "name": "meltonindiangrocery",
     "description": "This project is really great.",
-    "slug": "PR1",
+    "slug": "meltonindiangrocery",
     "facebookScheme":"",
     "privacy": "public",
     "sdkVersion": "31.0.0",
