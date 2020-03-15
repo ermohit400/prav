@@ -12,7 +12,7 @@
     "@expo/react-native-touchable-native-feedback-safe": "^1.1.2",
     "@expo/samples": "^2.1.1",
     "@expo/vector-icons": "^8.0.0",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "expo": "^31.0.2",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
